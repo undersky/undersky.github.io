@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="SecureCRT是VanDyke Software的一个商业SSH、Telnet客户端和虚拟终端软件  在SecureCRT中使用VBSCRIPT脚本，确实能够提高我们的工作效率，并且可以实现完全的自动化。 先看一个自动登录的脚本例子：123456789101112131415161718192021222324252627# $language =  &quot;VBScript&quot;# $interfa">
+<meta name="description" content="SecureCRT是VanDyke Software的一个商业SSH、Telnet客户端和虚拟终端软件  在SecureCRT中使用VBSCRIPT脚本，确实能够提高我们的工作效率，并且可以实现完全的自动化。 先看一个自动telnet登录的脚本例子：123456789101112131415161718192021222324252627# $language =  &quot;VBScript&quot;# $i">
 <meta name="keywords" content="VB,SecureCRT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在SecureCRT中使用VBScript脚本">
 <meta property="og:url" content="https://undersky.github.io/posts/programming/20180919-Using-VBScript-in-SecureCRT.html">
-<meta property="og:site_name" content="Undersky&#39;s Blog">
-<meta property="og:description" content="SecureCRT是VanDyke Software的一个商业SSH、Telnet客户端和虚拟终端软件  在SecureCRT中使用VBSCRIPT脚本，确实能够提高我们的工作效率，并且可以实现完全的自动化。 先看一个自动登录的脚本例子：123456789101112131415161718192021222324252627# $language =  &quot;VBScript&quot;# $interfa">
+<meta property="og:site_name" content="明天の时光机">
+<meta property="og:description" content="SecureCRT是VanDyke Software的一个商业SSH、Telnet客户端和虚拟终端软件  在SecureCRT中使用VBSCRIPT脚本，确实能够提高我们的工作效率，并且可以实现完全的自动化。 先看一个自动telnet登录的脚本例子：123456789101112131415161718192021222324252627# $language =  &quot;VBScript&quot;# $i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-19T05:47:57.946Z">
+<meta property="og:updated_time" content="2018-09-19T07:23:14.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在SecureCRT中使用VBScript脚本">
-<meta name="twitter:description" content="SecureCRT是VanDyke Software的一个商业SSH、Telnet客户端和虚拟终端软件  在SecureCRT中使用VBSCRIPT脚本，确实能够提高我们的工作效率，并且可以实现完全的自动化。 先看一个自动登录的脚本例子：123456789101112131415161718192021222324252627# $language =  &quot;VBScript&quot;# $interfa">
+<meta name="twitter:description" content="SecureCRT是VanDyke Software的一个商业SSH、Telnet客户端和虚拟终端软件  在SecureCRT中使用VBSCRIPT脚本，确实能够提高我们的工作效率，并且可以实现完全的自动化。 先看一个自动telnet登录的脚本例子：123456789101112131415161718192021222324252627# $language =  &quot;VBScript&quot;# $i">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>在SecureCRT中使用VBScript脚本 | Undersky's Blog</title>
+  <title>在SecureCRT中使用VBScript脚本 | 明天の时光机</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Undersky's Blog</span>
+        <span class="site-title">明天の时光机</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -272,7 +272,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Undersky's Blog">
+      <meta itemprop="name" content="明天の时光机">
     </span>
 
     
@@ -356,7 +356,11 @@
 <p><strong>SecureCRT</strong>是VanDyke Software的一个商业SSH、Telnet客户端和虚拟终端软件</p>
 </blockquote>
 <p>在SecureCRT中使用VBSCRIPT脚本，确实能够提高我们的工作效率，并且可以实现完全的自动化。</p>
-<p>先看一个自动登录的脚本例子：<br><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># $language =  <span class="string">"VBScript"</span></span><br><span class="line"></span><br><span class="line"># $interface =  <span class="string">"1.0"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Sub</span> Main</span><br><span class="line"></span><br><span class="line">crt.Screen.Synchronous  = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment">' connect to host on port 23 (the default telnet port)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'</span></span><br><span class="line"></span><br><span class="line">crt.Session.Connect <span class="string">"/TELNET login.myhost.com 23"</span></span><br><span class="line"></span><br><span class="line">crt.Screen.WaitForString(<span class="string">"login:"</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">crt.Screen.Send <span class="string">"myusername"</span>  &amp;  <span class="built_in">chr</span>(<span class="number">13</span>)</span><br><span class="line"></span><br><span class="line">crt.Screen.WaitForString(<span class="string">"password:"</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">crt.Screen.Send <span class="string">"mypassword"</span>  &amp;  <span class="built_in">chr</span>(<span class="number">13</span>)</span><br><span class="line"></span><br><span class="line">crt.Sleep (<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">crt.Screen.Synchronous  = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure></p>
+<p>先看一个自动telnet登录的脚本例子：<br><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># $language =  <span class="string">"VBScript"</span></span><br><span class="line"></span><br><span class="line"># $interface =  <span class="string">"1.0"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Sub</span> Main</span><br><span class="line"></span><br><span class="line">crt.Screen.Synchronous  = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment">' connect to host on port 23 (the default telnet port)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'</span></span><br><span class="line"></span><br><span class="line">crt.Session.Connect <span class="string">"/TELNET login.myhost.com 23"</span></span><br><span class="line"></span><br><span class="line">crt.Screen.WaitForString(<span class="string">"login:"</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">crt.Screen.Send <span class="string">"myusername"</span>  &amp;  <span class="built_in">chr</span>(<span class="number">13</span>)</span><br><span class="line"></span><br><span class="line">crt.Screen.WaitForString(<span class="string">"password:"</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">crt.Screen.Send <span class="string">"mypassword"</span>  &amp;  <span class="built_in">chr</span>(<span class="number">13</span>)</span><br><span class="line"></span><br><span class="line">crt.Sleep (<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">crt.Screen.Synchronous  = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure></p>
+<p>PS:</p>
+<ol>
+<li>如何发送控制字符（比如Ctrl+C）<br>   crt.screen.sendkeys(“^C”)</li>
+</ol>
 
       
     </div>
