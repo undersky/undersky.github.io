@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。使用的emwin版本是V5.48 当我们用VS2017打开SimulationTrial.sln时， 会提示我们升级平台工具集，我们直接点击确定即可。  升级完成后直接编译工程，会报一大堆错误。  这时候我们在工程上右击-&amp;gt;属性，选择链接器">
+<meta name="description" content="emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。使用的emwin版本是V5.48 当我们用VS2017打开SimulationTrial.sln时， 会提示我们升级平台工具集，我们直接点击确定即可。  &amp;lt; !–more–&amp;gt; 升级完成后直接编译工程，会报一大堆错误。  这时候我们在工">
 <meta name="keywords" content="vs2017,emwin,stm32">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决VS2017运行emwin模拟机不能运行的问题">
 <meta property="og:url" content="https://undersky.github.io/posts/programming/20180923-Solve-emwin-build-fail-in-vs2017.html">
 <meta property="og:site_name" content="明天の时光机">
-<meta property="og:description" content="emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。使用的emwin版本是V5.48 当我们用VS2017打开SimulationTrial.sln时， 会提示我们升级平台工具集，我们直接点击确定即可。  升级完成后直接编译工程，会报一大堆错误。  这时候我们在工程上右击-&amp;gt;属性，选择链接器">
+<meta property="og:description" content="emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。使用的emwin版本是V5.48 当我们用VS2017打开SimulationTrial.sln时， 会提示我们升级平台工具集，我们直接点击确定即可。  &amp;lt; !–more–&amp;gt; 升级完成后直接编译工程，会报一大堆错误。  这时候我们在工">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ohjmh3hga.qnssl.com/image/blog/20180922_2.png-origin">
 <meta property="og:image" content="https://ohjmh3hga.qnssl.com/image/blog/20180922_3.png-origin">
@@ -93,10 +93,10 @@
 <meta property="og:image" content="https://ohjmh3hga.qnssl.com/image/blog/20180922_6.png-640x480water.gif">
 <meta property="og:image" content="https://ohjmh3hga.qnssl.com/image/blog/20180922_5.png-640x480water.gif">
 <meta property="og:image" content="https://ohjmh3hga.qnssl.com/image/blog/20180922_7.png-640x480water.gif">
-<meta property="og:updated_time" content="2018-09-23T10:26:43.178Z">
+<meta property="og:updated_time" content="2018-09-23T10:30:24.862Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决VS2017运行emwin模拟机不能运行的问题">
-<meta name="twitter:description" content="emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。使用的emwin版本是V5.48 当我们用VS2017打开SimulationTrial.sln时， 会提示我们升级平台工具集，我们直接点击确定即可。  升级完成后直接编译工程，会报一大堆错误。  这时候我们在工程上右击-&amp;gt;属性，选择链接器">
+<meta name="twitter:description" content="emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。使用的emwin版本是V5.48 当我们用VS2017打开SimulationTrial.sln时， 会提示我们升级平台工具集，我们直接点击确定即可。  &amp;lt; !–more–&amp;gt; 升级完成后直接编译工程，会报一大堆错误。  这时候我们在工">
 <meta name="twitter:image" content="https://ohjmh3hga.qnssl.com/image/blog/20180922_2.png-origin">
 
 
@@ -373,6 +373,7 @@
         <p>emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。<br>使用的emwin版本是V5.48</p>
 <p>当我们用VS2017打开<strong>SimulationTrial.sln</strong>时， 会提示我们升级平台工具集，我们直接点击确定即可。</p>
 <p><img src="https://ohjmh3hga.qnssl.com/image/blog/20180922_2.png-origin" alt="升级平台集"></p>
+<p>&lt; !–more–&gt;</p>
 <p>升级完成后直接编译工程，会报一大堆错误。</p>
 <p><img src="https://ohjmh3hga.qnssl.com/image/blog/20180922_3.png-origin" alt="错误信息"></p>
 <p>这时候我们在工程上<strong>右击-&gt;属性</strong>，选择<strong>链接器-&gt;输入</strong>，将<strong>忽略所有默认库</strong>项选为“<strong>否</strong>”，在<strong>忽略特定默认库项</strong>填入“<strong>LIBC.lib;LIBCMTD.lib</strong>”。</p>
