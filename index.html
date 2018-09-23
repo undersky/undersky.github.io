@@ -366,23 +366,16 @@
 
       
         
-          
-            <p>emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。<br>使用的emwin版本是V5.48</p>
+          <p>emwin是一个很好用的嵌入式图形库。当我们下载了官网的windows下模拟文件后，用最新的VS2017打开编译时，会编译失败。下面我们来解决下编译问题。<br>使用的emwin版本是V5.48</p>
 <p>当我们用VS2017打开<strong>SimulationTrial.sln</strong>时， 会提示我们升级平台工具集，我们直接点击确定即可。</p>
 <p><img src="https://ohjmh3hga.qnssl.com/image/blog/20180922_2.png-origin" alt="升级平台集"></p>
-<p>&lt; !–more–&gt;</p>
-<p>升级完成后直接编译工程，会报一大堆错误。</p>
-<p><img src="https://ohjmh3hga.qnssl.com/image/blog/20180922_3.png-origin" alt="错误信息"></p>
-<p>这时候我们在工程上<strong>右击-&gt;属性</strong>，选择<strong>链接器-&gt;输入</strong>，将<strong>忽略所有默认库</strong>项选为“<strong>否</strong>”，在<strong>忽略特定默认库项</strong>填入“<strong>LIBC.lib;LIBCMTD.lib</strong>”。</p>
-<p><img src="https://ohjmh3hga.qnssl.com/image/blog/20180922_4.png-640x480water.gif" alt="设忽略所有默认库置"></p>
-<p>然后在<strong>附加依赖项</strong>里加入“<strong>legacy_stdio_definitions.lib;</strong>”</p>
-<p><img src="https://ohjmh3hga.qnssl.com/image/blog/20180922_6.png-640x480water.gif" alt="附加依赖项"></p>
-<p>最后，选择<strong>链接器-&gt;高级</strong>， 将<strong>映像具有安全异常处理程序</strong>项改为<strong>否</strong>。</p>
-<p><img src="https://ohjmh3hga.qnssl.com/image/blog/20180922_5.png-640x480water.gif" alt=""></p>
-<p>再次编译就可以通过运行了。</p>
-<p><img src="https://ohjmh3hga.qnssl.com/image/blog/20180922_7.png-640x480water.gif" alt=""></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/posts/programming/20180923-Solve-emwin-build-fail-in-vs2017.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
