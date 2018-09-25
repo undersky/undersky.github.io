@@ -4,8 +4,7 @@ Allow: /archives/
 Allow: /tags/
 Allow: /about/
 Allow: /categories/
-Allow: /images/
-Allow: /posts/
+
 
 Disallow: /vendors/
 Disallow: /js/
